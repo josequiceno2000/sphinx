@@ -31,7 +31,7 @@
 2. ~~Create a list of ints range 1 to 100~~ ✔
 3. ~~Use random module to randomly choose a number and store it~~ ✔
 4. ~~Return number~~ ✔
-5. Create docstring
+5. ~~Create docstring~~ ✔
 6. Connect to main
 7. Test function
 ### Make Guess
