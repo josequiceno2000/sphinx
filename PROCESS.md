@@ -32,8 +32,8 @@
 3. ~~Use random module to randomly choose a number and store it~~ ✔
 4. ~~Return number~~ ✔
 5. ~~Create docstring~~ ✔
-6. Connect to main
-7. Test function
+6. ~~Connect to main~~ ✔
+7. ~~Test function~~ ✔
 ### Make Guess
 1. Create make guess function
 2. Have it ask the user for a guess

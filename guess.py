@@ -13,4 +13,5 @@ def think_of_number():
     """
     Returns a random number between 1 and 100.
     """
+    
     return random.randint(1, 100)
