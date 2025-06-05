@@ -35,10 +35,10 @@
 6. ~~Connect to main~~ ✔
 7. ~~Test function~~ ✔
 ### Make Guess
-1. Create make guess function
-2. Have it ask the user for a guess
-3. Ensure that the guess is an integer between 1 and 100
-    i. Return guess if valid
+1. ~~Create make guess function~~ ✔
+2. ~~Have it ask the user for a guess~~ ✔
+3. ~~Ensure that the guess is an integer between 1 and 100~~ ✔
+    i. ~~Return guess if valid~~ ✔
 4. Add docstring
 5. Connect to main
 6. Test fucntion

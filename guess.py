@@ -13,5 +13,15 @@ def think_of_number():
     """
     Returns a random number between 1 and 100.
     """
-    
+
     return random.randint(1, 100)
+
+def make_guess() -> int:
+    user_guess = 0
+    while (not isinstance(user_guess, int)) and (not 1 <= user_guess <= 100):
+        try:
+            user_guess = int(input("Make a guess.\n> "))
+        except TypeError:
+            print("ERROR: you must type a number ('1', '12', etc.)")
+    
+    return user_guess
