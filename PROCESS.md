@@ -27,10 +27,10 @@
 3. ~~Add docstring~~ ✔
 4. ~~Connect function to main.py~~ ✔
 ### Think of Number
-1. Create think_of_number fuction
-2. Create a list of ints range 1 to 100
-3. Use random module to randomly choose a number and store it
-4. Return number
+1. ~~Create think_of_number fuction~~ ✔
+2. ~~Create a list of ints range 1 to 100~~ ✔
+3. ~~Use random module to randomly choose a number and store it~~ ✔
+4. ~~Return number~~ ✔
 5. Create docstring
 6. Connect to main
 7. Test function
