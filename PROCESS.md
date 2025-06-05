@@ -40,8 +40,8 @@
 3. ~~Ensure that the guess is an integer between 1 and 100~~ ✔
     i. ~~Return guess if valid~~ ✔
 4. ~~Add docstring~~ ✔
-5. Connect to main
-6. Test fucntion
+5. ~~Connect to main~~ ✔
+6. ~~Test fucntion~~ ✔
 ### Check Guess
 1. Create a check guess function
 2. Check guess against actual number

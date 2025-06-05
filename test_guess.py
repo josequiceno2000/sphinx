@@ -1,6 +1,6 @@
 import pytest
 import random
-from guess import think_of_number
+from guess import think_of_number, make_guess
 
 def test_think_of_number_returns_int(monkeypatch):
     """
@@ -37,3 +37,61 @@ def test_think_of_number_calls_randint_with_correct_args(monkeypatch):
     think_of_number()
 
     assert mock_randint_called_with == (1, 100)
+
+
+def test_make_guess_valid_input(monkeypatch):
+    """
+    Tests that make_guess returns a valid number when correct input is provided.
+    """
+    
+    monkeypatch.setattr('builtins.input', lambda _: '50')
+    assert make_guess() == 50
+
+def test_make_guess_lower_bound_input(monkeypatch):
+    """
+    Tests that make_guess returns 1 when 1 is provided.
+    """
+
+    monkeypatch.setattr('builtins.input', lambda _: '1')
+    assert make_guess() == 1
+
+def test_make_guess_upper_bound_input(monkeypatch):
+    """
+    Tests that make_guess returns 100 when 100 is provided.
+    """
+
+    monkeypatch.setattr('builtins.input', lambda _: '100')
+    assert make_guess() == 100
+
+def test_make_guess_invalid_then_valid_out_of_range_low(monkeypatch, capsys):
+    """
+    Tests that make_guess handles out-of-range low input, prints error,
+    and then accepts valid input.
+    """
+
+    inputs = iter(['0', '50']) 
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    result = make_guess()
+    assert result == 50
+    
+    captured = capsys.readouterr()
+    assert "ERROR" not in captured.out 
+
+
+def test_make_guess_invalid_then_valid_out_of_range_high(monkeypatch, capsys):
+    """
+    Tests that make_guess handles out-of-range high input, prints error,
+    and then accepts valid input.
+    """
+
+    inputs = iter(['101', '75'])
+    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+
+    result = make_guess()
+
+    assert result == 75
+    
+    captured = capsys.readouterr()
+    assert "ERROR" not in captured.out
+
