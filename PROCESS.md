@@ -9,10 +9,9 @@
 4. ~~Explain the game.~~ ✔
 5. ~~Add docstring.~~ ✔
 6. ~~Connect intro to main.~~ ✔
-7. Test intro function.
 ### Choose Difficulty
-1. Create a choose difficulty function.
-2. Ask user to choose a difficulty.
+1. ~~Create a choose difficulty function.~~ ✔
+2. ~~Ask user to choose a difficulty.~~ ✔
 3. Add docstring.
 4. Connect choose difficulty to main.
 5. Test function.
