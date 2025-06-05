@@ -1,7 +1,8 @@
 from intro import intro
 
 def main():
-    intro()
+    difficulty = intro()
+    print(difficulty)
 
 if __name__ == "__main__":
     main()
