@@ -43,11 +43,11 @@
 5. ~~Connect to main~~ ✔
 6. ~~Test fucntion~~ ✔
 ### Check Guess
-1. Create a check guess function
-2. Check guess against actual number
-3. If guess too high: print too high and lower attempts left variable
-4. If guess too low: print too low and lower attempts left variable
-5. If guess is right print congratulations message and set correct_guess to true
+1. ~~Create a check guess function~~ ✔
+2. ~~Check guess against actual number~~ ✔
+3. ~~If guess too high: print too high and lower attempts left variable~~ ✔
+4. ~~If guess too low: print too low and lower attempts left variable~~ ✔
+5. ~~If guess is right print congratulations message and set correct_guess to true~~ ✔
 6. Add docstring
 7. Connect to main
 8. Test function

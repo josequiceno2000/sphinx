@@ -16,6 +16,21 @@ def think_of_number():
 
     return random.randint(1, 100)
 
+def check_guess(user_guess: int, sphinx_number: int, attempts_left: int):
+    if user_guess == sphinx_number:
+        print(f"You got it! The answer was {sphinx_number}.")
+        return True
+    elif user_guess > sphinx_number:
+        print("Too high.")
+        attempts_left -= 1
+    elif user_guess < sphinx_number:
+        print("Too low.")
+        attempts_left -= 1
+
+    if attempts_left == 0:
+        return True
+    return False
+
 def make_guess() -> int:
     """
     Returns user guess as long as it is a number between 1 and 100 (inclusive).
