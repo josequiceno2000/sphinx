@@ -52,3 +52,8 @@
 7. ~~Connect to main~~ ✔
 8. ~~Test function~~ ✔
 
+## Main
+### Game Loop
+1. ~~Create game loop based on end_game condition.~~ ✔
+2. ~~End game once player runs out of lives or guesses correctly.~~ ✔
+
