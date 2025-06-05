@@ -10,6 +10,8 @@ title_card = """
                                                                         
 """
 def choose_difficulty() -> str:
+    """Asks user to choose 'easy' or 'hard' difficulty, then returns their choice."""
+
     player_difficulty = ""
 
     while player_difficulty not in (["hard", "easy"]):
@@ -21,6 +23,7 @@ def choose_difficulty() -> str:
 
 def intro() -> str:
     """Prints title card and welcome messages to begin game."""
+    
     print(title_card)
     print("Welcome to SPHINX. Try to guess the number in my head...")
     print("I'm thinking of a number between 1 and 100.")
