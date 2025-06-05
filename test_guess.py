@@ -1,6 +1,6 @@
 import pytest
 import random
-from guess import think_of_number, make_guess
+from guess import think_of_number, make_guess, check_guess
 
 def test_think_of_number_returns_int(monkeypatch):
     """
@@ -95,3 +95,98 @@ def test_make_guess_invalid_then_valid_out_of_range_high(monkeypatch, capsys):
     captured = capsys.readouterr()
     assert "ERROR" not in captured.out
 
+def test_check_guess_correct(capsys):
+    """
+    Tests that check_guess correctly identifies a correct guess,
+    prints the win message, and returns True for end_game.
+    """
+
+    user_guess, sphinx_number, attempts_left = 50, 50, 5
+
+    new_attempts, end_game = check_guess(user_guess, sphinx_number, attempts_left)
+
+    assert new_attempts == attempts_left  # Attempts should not decrease on correct guess
+    assert end_game is True
+
+    captured = capsys.readouterr()
+    assert f"You got it! The answer was {sphinx_number}." in captured.out
+
+def test_check_guess_too_high(capsys):
+    """
+    Tests that check_guess correctly identifies a 'too high' guess,
+    prints the message, decreases attempts, and returns False for end_game.
+    """
+
+    user_guess, sphinx_number, attempts_left = 75, 50, 5
+
+    new_attempts, end_game = check_guess(user_guess, sphinx_number, attempts_left)
+
+    assert new_attempts == attempts_left - 1
+    assert end_game is False
+
+    captured = capsys.readouterr()
+    assert "Too high." in captured.out
+
+def test_check_guess_too_low(capsys):
+    """
+    Tests that check_guess correctly identifies a 'too low' guess,
+    prints the message, decreases attempts, and returns False for end_game.
+    """
+
+    user_guess, sphinx_number, attempts_left = 25, 50, 5
+
+    new_attempts, end_game = check_guess(user_guess, sphinx_number, attempts_left)
+
+    assert new_attempts == attempts_left - 1
+    assert end_game is False
+
+    captured = capsys.readouterr()
+    assert "Too low." in captured.out
+
+def test_check_guess_last_attempt_too_high(capsys):
+    """
+    Tests that if attempts_left becomes 0 after a 'too high' guess,
+    end_game is True.
+    """
+
+    user_guess, sphinx_number, attempts_left = 75, 50, 1
+
+    new_attempts, end_game = check_guess(user_guess, sphinx_number, attempts_left)
+
+    assert new_attempts == 0
+    assert end_game is True # Game should end
+
+    captured = capsys.readouterr()
+    assert "Too high." in captured.out
+
+def test_check_guess_last_attempt_too_low(capsys):
+    """
+    Tests that if attempts_left becomes 0 after a 'too low' guess,
+    end_game is True.
+    """
+
+    user_guess, sphinx_number, attempts_left = 25, 50, 1
+
+    new_attempts, end_game = check_guess(user_guess, sphinx_number, attempts_left)
+
+    assert new_attempts == 0
+    assert end_game is True # Game should end
+
+    captured = capsys.readouterr()
+    assert "Too low." in captured.out
+
+def test_check_guess_multiple_attempts_remain(capsys):
+    """
+    Tests that if attempts_left is > 0 after a wrong guess,
+    end_game is False.
+    """
+
+    user_guess, sphinx_number, attempts_left = 40, 50, 2
+
+    new_attempts, end_game = check_guess(user_guess, sphinx_number, attempts_left)
+
+    assert new_attempts == 1
+    assert end_game is False
+
+    captured = capsys.readouterr()
+    assert "Too low." in captured.out
