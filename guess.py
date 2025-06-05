@@ -5,5 +5,5 @@ def display_attempts_left(attempts_left: int) -> None:
     """
 
     print("\n********** ATTEMPTS LEFT **********")
-    print(f"\nYou have {attempts_left} guesses remaining.\n".center())
+    print(f"\nYou have {attempts_left} guesses remaining.\n".center(35))
     print("***********************************")

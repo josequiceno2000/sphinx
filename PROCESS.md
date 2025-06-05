@@ -25,7 +25,7 @@
 1. ~~Create a display attempts left function~~ ✔
 2. ~~Display attempts left through message~~ ✔
 3. ~~Add docstring~~ ✔
-4. Connect function to main.py
+4. ~~Connect function to main.py~~ ✔
 ### Think of Number
 1. Create think_of_number fuction
 2. Create a list of ints range 1 to 100
