@@ -14,4 +14,4 @@
 2. ~~Ask user to choose a difficulty.~~ ✔
 3. ~~Add docstring.~~ ✔
 4. ~~Connect choose difficulty to main.~~ ✔
-5. Test function.
+5. ~~Test function.~~ ✔
