@@ -17,6 +17,10 @@ def think_of_number():
     return random.randint(1, 100)
 
 def make_guess() -> int:
+    """
+    Returns user guess as long as it is a number between 1 and 100 (inclusive).
+    """
+
     user_guess = 0
     while (not isinstance(user_guess, int)) and (not 1 <= user_guess <= 100):
         try:
