@@ -1,5 +1,5 @@
 from intro import intro
-from guess import think_of_number, display_attempts_left, make_guess
+from guess import think_of_number, display_attempts_left, make_guess, check_guess
 
 def main():
     sphinx_number = think_of_number()
@@ -7,7 +7,7 @@ def main():
     attempts_left = intro()
     display_attempts_left(attempts_left)
     user_guess = make_guess()
-    end_game = check
+    attempts_left, end_game = check_guess(user_guess, sphinx_number, attempts_left)
     
 
 
