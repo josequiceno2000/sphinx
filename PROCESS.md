@@ -7,7 +7,7 @@
 2. ~~Create ASCII title card.~~ ✔
 3. ~~Add welcome message.~~ ✔
 4. ~~Explain the game.~~ ✔
-5. Add docstring.
+5. ~~Add docstring.~~ ✔
 6. Connect intro to main.
 7. Test intro function.
 ### Choose Difficulty
