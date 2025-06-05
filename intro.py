@@ -21,11 +21,11 @@ def choose_difficulty() -> str:
     
     return player_difficulty
 
-def intro() -> str:
+def intro() -> int:
     """Prints title card and welcome messages to begin game."""
 
     print(title_card)
     print("Welcome to SPHINX. Try to guess the number in my head...")
     print("I'm thinking of a number between 1 and 100.")
-    return choose_difficulty()
+    return 10 if choose_difficulty() == 'easy' else 5
 
