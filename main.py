@@ -1,6 +1,7 @@
+from intro import intro
 
 def main():
-    pass
+    intro()
 
 if __name__ == "__main__":
     main()

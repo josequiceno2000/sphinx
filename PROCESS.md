@@ -8,7 +8,7 @@
 3. ~~Add welcome message.~~ ✔
 4. ~~Explain the game.~~ ✔
 5. ~~Add docstring.~~ ✔
-6. Connect intro to main.
+6. ~~Connect intro to main.~~ ✔
 7. Test intro function.
 ### Choose Difficulty
 1. Create a choose difficulty function.
